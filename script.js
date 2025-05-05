@@ -49,3 +49,16 @@ const eseguiOperazione = (num1, num2, operazione) => operazione(num1, num2);
 
 console.log(eseguiOperazione(20, 10, sottrazione)); //output 10
 console.log(eseguiOperazione(20, 10, divisione)); //output 2
+
+
+//🏆 Snack 4
+
+//Crea un generatore di funzioni creaTimer
+
+//Scrivi una funzione creaTimer che accetta un tempo (in ms) e restituisce una nuova funzione che avvia un setTimeout per stampare "Tempo scaduto!".
+
+const creaTimer = (tms) => {
+    return setTimeout(() => console.log("Tempo scaduto!"), tms)
+}
+
+creaTimer(1000); //dopo un secondo ottengo la scritta "Tempo scaduto!"
