@@ -214,7 +214,7 @@ function stampaMessaggio (msg){
 
 
 function creaThrottler(funz, t_lim) {
-    let pronto = true;
+    let pronto = true; 
   
     return function esegueSoloSePuo(arg) {
       if (pronto) {
