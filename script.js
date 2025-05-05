@@ -35,3 +35,17 @@ arrowSomma(20, 20) //output 40
 const quadrato = numero => console.log(numero * numero);
 
 quadrato(10); //output 100
+
+
+//🏆 Snack 3
+
+//Crea una funzione eseguiOperazione
+
+//Definisci una funzione eseguiOperazione che accetta tre parametri: due numeri e una funzione operatore (callback). La funzione deve eseguire l'operazione fornita sui due numeri.
+const sottrazione = (num1,num2) => (num1 - num2)
+const divisione = (num1,num2) => (num1 / num2)
+
+const eseguiOperazione = (num1, num2, operazione) => operazione(num1, num2);
+
+console.log(eseguiOperazione(20, 10, sottrazione)); //output 10
+console.log(eseguiOperazione(20, 10, divisione)); //output 2
