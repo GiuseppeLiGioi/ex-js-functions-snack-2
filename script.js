@@ -194,3 +194,43 @@ console.log(element + "!" + index);
 }
 
 sequenzaOperazioni(arrOperaizioni, 1000);
+
+
+
+
+/*
+🎯 Snack 10 (Bonus)
+Creare un throttler per limitare l’esecuzione di una funzione
+Scrivi una funzione creaThrottler che accetta una funzione e un tempo `limite`.
+
+Restituisce una nuova funzione che, quando chiamata ripetutamente, esegue l'operazione originale al massimo una volta ogni n millisecondi.
+*/
+
+function stampaMessaggio (msg){
+    return console.log("Messaggio:", msg);
+}
+
+
+
+function creaThrottler(funz, t_lim) {
+    let pronto = true;
+  
+    return function esegueSoloSePuo(arg) {
+      if (pronto) {
+        funz(arg);
+        pronto = false;
+        setTimeout(function() {
+            pronto = true;
+          }, t_lim);
+          
+      }
+    };
+  }
+  
+
+  const throttled = creaThrottler(stampaMessaggio, 2000);
+
+  setInterval(() => {
+    throttled("Ciao Giuseeeeeeeee!");
+  }, 500);
+
